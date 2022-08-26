@@ -36,7 +36,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 50px 0px;
+        margin: 15px 0px;
         border: 2px solid #333;
         width: 600px;
         height: 400px;
@@ -52,7 +52,7 @@
     .code-btn {
         margin: 0px 150px;
         padding: 10px 30px;
-        background-color: rgb(80, 52, 180);
+        background-color: #111133;
         color: #fff;
         font-size: 20px;
         border: none;
@@ -62,14 +62,14 @@
 
     #code {
         position: relative;
-        top: 140px;
+        top: 160px;
 
     }
 
     .compiler-btn {
         margin: 0px 150px;
         padding: 10px 30px;
-        background-color: rgb(80, 52, 180);
+        background-color: #111133;
         color: #fff;
         font-size: 20px;
         border: none;
@@ -84,17 +84,23 @@
         .main {
             width: 100vw;
             position: relative;
-            left: 100px;
+            right: 10px;
         }
 
         .code-btn,
         .compiler-btn {
-            margin: 0px 60px;
+            margin: 0px 20px;
         }
 
         .contain {
-            width: 400px;
+
+            width: 300px;
             height: 400px;
+        }
+
+        iframe {
+            width: 296px;
+            height: 100vh;
         }
     }
 </style>
@@ -104,7 +110,7 @@
     <section>
         <div class="main">
             <div class="btn">
-                <button class="code-btn" onclick="code()">Code</button>
+                <button class="code-btn" onclick="code()">C++</button>
                 <button class=" compiler-btn" onclick="compiler()">Compiler</button>
             </div>
 

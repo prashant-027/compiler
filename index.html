@@ -17,7 +17,7 @@
 
     section {
         height: 100vh;
-        weight: 100vw;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -40,6 +40,7 @@
         border: 2px solid #333;
         width: 600px;
         height: 400px;
+        overflow: auto;
 
     }
 
@@ -56,6 +57,13 @@
         font-size: 20px;
         border: none;
         border-radius: 5px;
+
+    }
+
+    #code {
+        position: relative;
+        top: 140px;
+
     }
 
     .compiler-btn {
@@ -71,6 +79,24 @@
     iframe {
         display: none;
     }
+
+    @media only screen and (max-width: 600px) {
+        .main {
+            width: 100vw;
+            position: relative;
+            left: 100px;
+        }
+
+        .code-btn,
+        .compiler-btn {
+            margin: 0px 60px;
+        }
+
+        .contain {
+            width: 400px;
+            height: 400px;
+        }
+    }
 </style>
 
 <body>
@@ -84,41 +110,59 @@
 
             <div class="contain">
                 <p id="code">
-                    // Bubble sort in C++
+                    // Bubble sort in C++ <br>
 
-                    #include <iostream>
-                        using namespace std;
+                    #include &lt; iostream &gt; <br>
+                    using namespace std;<br>
 
-                        // perform bubble sort
-                        void bubbleSort(int array[], int size) {
+                    // perform bubble sort<br>
+                    void bubbleSort(int array[], int size) {<br>
 
-                        // loop to access each array element
-                        for (int step = 0; step < size; ++step) { // loop to compare array elements for (int i=0; i <
-                            size - step; ++i) { // compare two adjacent elements // change> to < to sort in descending
-                                order if (array[i]> array[i
-                                + 1]) {
+                    // loop to access each array element<br>
+                    for (int step = 0; step &lt; size; ++step) { <br>
 
-                                // swapping elements if elements
-                                // are not in the intended order
-                                int temp = array[i];
-                                array[i] = array[i + 1];
-                                array[i + 1] = temp;
-                                }
-                                }
-                                }
-                                }
+                    // loop to compare array elements<br>
+                    for (int i=0; i &lt; size - step; ++i) {<br>
 
-                                // print array
-                                void printArray(int array[], int size) {
-                                for (int i = 0; i < size; ++i) { cout << "  " << array[i]; } cout << "\n" ; } int main()
-                                    { int data[]={-2, 45, 0, 11, -9}; // find array's length int size=sizeof(data) /
-                                    sizeof(data[0]); bubbleSort(data, size); cout
-                                    << "Sorted Array in Ascending Order:\n" ; printArray(data, size); } </p>
+                    // compare two adjacent elements <br>
+                    // change &gt; to &lt; to sort in descending order<br>
+                    if (array[i] &gt; array[i+ 1]) {<br>
 
-                                    <iframe id="frame" width="560" height="315" src="https://tio.run/##Sy4o0E1PTv4PBAA"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                    // swapping elements if elements<br>
+                    // are not in the intended order<br>
+                    int temp = array[i];<br>
+                    array[i] = array[i + 1];<br>
+                    array[i + 1] = temp;<br>
+                    }<br>
+                    }<br>
+                    }<br>
+                    }<br>
+
+                    // print array<br>
+                    void printArray(int array[], int size) {<br>
+                    for (int i = 0; i &lt; size; ++i) {<br>
+                    cout &lt;&lt; " " &lt;&lt; array[i];<br>
+                    }<br>
+                    cout&lt;&lt; "\n" ;<br>
+                    }<br>
+
+                    int main(){<br>
+                    int data[]={-2, 45, 0, 11, -9};<br>
+
+                    // find array's length<br>
+                    int size=sizeof(data) / sizeof(data[0]);<br>
+
+                    bubbleSort(data, size);<br>
+
+                    cout &lt;&lt; "Sorted Array in Ascending Order:\n" ;<br>
+                    printArray(data,size);<br>
+                    }<br>
+                </p>
+
+                <iframe id="frame" width="560" height="315" src="https://tio.run/##Sy4o0E1PTv4PBAA"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
     </section>

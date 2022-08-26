@@ -20,60 +20,59 @@
         width: 100vw;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+
     }
 
     .main {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+
     }
 
     .contain {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 15px 0px;
+        margin: 1px 0px;
         border: 2px solid #333;
-        width: 600px;
-        height: 400px;
+        width: 100vw;
+
+        height: 750px;
         overflow: auto;
 
     }
 
     .btn {
         display: flex;
-        align-items: center;
+        width: 50vw;
     }
 
     .code-btn {
-        margin: 0px 150px;
-        padding: 10px 30px;
+
+        padding: 10px 50%;
         background-color: #111133;
         color: #fff;
         font-size: 20px;
+        width: 50%;
         border: none;
-        border-radius: 5px;
+        border-radius: 15px;
 
     }
 
     #code {
         position: relative;
-        top: 160px;
+
 
     }
 
     .compiler-btn {
-        margin: 0px 150px;
-        padding: 10px 30px;
+
+        padding: 10px 50%;
         background-color: #111133;
         color: #fff;
+        width: 50%;
         font-size: 20px;
         border: none;
-        border-radius: 5px;
+        border-radius: 15px;
     }
 
     iframe {
@@ -84,12 +83,12 @@
         .main {
             width: 100vw;
             position: relative;
-            right: 10px;
+
         }
 
         .code-btn,
         .compiler-btn {
-            margin: 0px 20px;
+            margin: 0px 30px;
         }
 
         .contain {
@@ -99,7 +98,7 @@
         }
 
         iframe {
-            width: 296px;
+            width: 100vh;
             height: 100vh;
         }
     }
@@ -116,57 +115,59 @@
 
             <div class="contain">
                 <p id="code">
-                    // Bubble sort in C++ <br>
+                    <strong>
 
-                    #include&lt;iostream&gt; <br>
-                    using namespace std;<br>
+                        #include&lt;iostream&gt; <br>
+                        using namespace std;<br>
+                        &nbsp;<br>
+                        // perform bubble sort<br>
+                        &nbsp;void bubbleSort(int array[], int size) {<br>
+                        <br>
+                        // loop to access each array element<br>
+                        &nbsp;&nbsp;for (int step = 0; step &lt; size; ++step) { <br>
+                        <br>
+                        // loop to compare array elements<br>
+                        &nbsp;&nbsp;for (int i=0; i &lt; size - step; ++i) {<br>
+                        <br>
+                        // compare two adjacent elements <br>
+                        // change &gt; to &lt; to sort in descending order<br>
+                        &nbsp;&nbsp;if (array[i] &gt; array[i+ 1]) {<br>
+                        <br>
+                        // swapping elements if elements<br>
+                        // are not in the intended order<br>
+                        &nbsp;&nbsp;&nbsp;int temp = array[i];<br>
+                        &nbsp;&nbsp;&nbsp;array[i] = array[i + 1];<br>
+                        &nbsp;&nbsp;&nbsp;array[i + 1] = temp;<br>
+                        &nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;}<br>
+                        &nbsp;}<br>
+                        }<br>
+                        <br>
+                        // print array<br>
+                        <br>
+                        void printArray(int array[], int size) {<br>
+                        &nbsp;for (int i = 0; i &lt; size; ++i) {<br>
+                        &nbsp;&nbsp;cout &lt;&lt; " " &lt;&lt; array[i];<br>
+                        &nbsp;}<br>
+                        &nbsp;cout&lt;&lt; "\n" ;<br>
+                        }<br>
+                        <br>
+                        int main(){<br>
+                        int data[]={-2, 45, 0, 11, -9};<br>
+                        <br>
 
-                    // perform bubble sort<br>
-                    void bubbleSort(int array[], int size) {<br>
+                        // find array's length<br>
+                        &nbsp;&nbsp;int size=sizeof(data) / sizeof(data[0]);<br>
 
-                    // loop to access each array element<br>
-                    for (int step = 0; step &lt; size; ++step) { <br>
+                        &nbsp;&nbsp;bubbleSort(data, size);<br>
 
-                    // loop to compare array elements<br>
-                    for (int i=0; i &lt; size - step; ++i) {<br>
-
-                    // compare two adjacent elements <br>
-                    // change &gt; to &lt; to sort in descending order<br>
-                    if (array[i] &gt; array[i+ 1]) {<br>
-
-                    // swapping elements if elements<br>
-                    // are not in the intended order<br>
-                    int temp = array[i];<br>
-                    array[i] = array[i + 1];<br>
-                    array[i + 1] = temp;<br>
-                    }<br>
-                    }<br>
-                    }<br>
-                    }<br>
-
-                    // print array<br>
-                    void printArray(int array[], int size) {<br>
-                    for (int i = 0; i &lt; size; ++i) {<br>
-                    cout &lt;&lt; " " &lt;&lt; array[i];<br>
-                    }<br>
-                    cout&lt;&lt; "\n" ;<br>
-                    }<br>
-
-                    int main(){<br>
-                    int data[]={-2, 45, 0, 11, -9};<br>
-
-                    // find array's length<br>
-                    int size=sizeof(data) / sizeof(data[0]);<br>
-
-                    bubbleSort(data, size);<br>
-
-                    cout &lt;&lt; "Sorted Array in Ascending Order:\n" ;<br>
-                    printArray(data,size);<br>
-                    }<br>
+                        &nbsp;&nbsp;cout &lt;&lt; "Sorted Array in Ascending Order:\n" ;<br>
+                        &nbsp;&nbsp;printArray(data,size);<br>
+                        }<br></strong>
                 </p>
 
-                <iframe id="frame" width="560" height="315" src="https://tio.run/##Sy4o0E1PTv4PBAA"
-                    title="YouTube video player" frameborder="0"
+                <iframe id="frame" width="100%" height="100%" src="https://tio.run/#cpp-gcc" title="C++ Compiler"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+
+    }
+
+    section {
+        height: 100vh;
+        weight: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0px;
+        border: 2px solid #333;
+        width: 600px;
+        height: 400px;
+
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .code-btn {
+        margin: 0px 150px;
+        padding: 10px 30px;
+        background-color: rgb(238, 88, 29);
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .compiler-btn {
+        margin: 0px 150px;
+        padding: 10px 30px;
+        background-color: rgb(80, 52, 180);
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    iframe {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <section>
+        <div class="main">
+            <div class="btn">
+                <button class="code-btn" onclick="code()">Code</button>
+                <button class=" compiler-btn" onclick="compiler()">Compiler</button>
+            </div>
+
+            <div class="contain">
+                <p id="code">
+                    // Bubble sort in C++
+
+                    #include <iostream>
+                        using namespace std;
+
+                        // perform bubble sort
+                        void bubbleSort(int array[], int size) {
+
+                        // loop to access each array element
+                        for (int step = 0; step < size; ++step) { // loop to compare array elements for (int i=0; i <
+                            size - step; ++i) { // compare two adjacent elements // change> to < to sort in descending
+                                order if (array[i]> array[i
+                                + 1]) {
+
+                                // swapping elements if elements
+                                // are not in the intended order
+                                int temp = array[i];
+                                array[i] = array[i + 1];
+                                array[i + 1] = temp;
+                                }
+                                }
+                                }
+                                }
+
+                                // print array
+                                void printArray(int array[], int size) {
+                                for (int i = 0; i < size; ++i) { cout << "  " << array[i]; } cout << "\n" ; } int main()
+                                    { int data[]={-2, 45, 0, 11, -9}; // find array's length int size=sizeof(data) /
+                                    sizeof(data[0]); bubbleSort(data, size); cout
+                                    << "Sorted Array in Ascending Order:\n" ; printArray(data, size); } </p>
+
+                                    <iframe id="frame" width="560" height="315" src="https://tio.run/##Sy4o0E1PTv4PBAA"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <script>
+        function compiler() {
+
+            document.getElementById("code").style.display = "none";
+            document.getElementById("frame").style.display = "block";
+        }
+        function code() {
+
+            document.getElementById("code").style.display = "block";
+            document.getElementById("frame").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

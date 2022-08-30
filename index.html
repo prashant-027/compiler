@@ -24,18 +24,27 @@
 
     }
 
-    .main {
+    .main1,
+    .main2,
+    .main3,
+    .main4 {
         display: flex;
         flex-direction: column;
 
 
     }
 
-    #code {
+    #code1,
+    #code2,
+    #code3,
+    #code4 {
         margin-left: 1em;
     }
 
-    .contain {
+    .contain1,
+    .contain2,
+    .contain3,
+    .contain4 {
         display: flex;
         flex-direction: column;
         margin: 1px 0px;
@@ -44,12 +53,18 @@
 
     }
 
-    .btn {
+    .btn1,
+    .btn2,
+    .btn3,
+    .btn4 {
         display: flex;
         width: 50vw;
     }
 
-    .code-btn {
+    .code-btn1,
+    .code-btn2,
+    .code-btn3,
+    .code-btn4 {
 
         padding: 10px 46%;
         background-color: #111133;
@@ -61,7 +76,10 @@
 
     }
 
-    .compiler-btn {
+    .compiler-btn1,
+    .compiler-btn2,
+    .compiler-btn3,
+    .compiler-btn4 {
 
         padding: 10px 45%;
         background-color: #111133;
@@ -77,7 +95,11 @@
     }
 
     @media only screen and (max-width: 600px) {
-        .code-btn {
+
+        .code-btn1,
+        .code-btn2,
+        .code-btn3,
+        .code-btn4 {
 
             padding: 10px 40%;
             background-color: #111133;
@@ -88,7 +110,10 @@
 
         }
 
-        .compiler-btn {
+        .compiler-btn1,
+        .compiler-btn2,
+        .compiler-btn3,
+        .compiler-btn4 {
 
             padding: 10px 40%;
             background-color: #111133;
@@ -103,16 +128,17 @@
 </style>
 
 <body>
-
+    <!-- NEW SECTION FOR C -->
     <section>
-        <div class="main">
-            <div class="btn">
-                <button class="code-btn" onclick="code()">C++</button>
-                <button class=" compiler-btn" onclick="compiler()">Compiler</button>
+
+        <div class="main1">
+            <div class="btn1">
+                <button class="code-btn1" onclick="code1()">C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                <button class=" compiler-btn1" onclick="compiler1()">Compiler</button>
             </div>
 
-            <div class="contain">
-                <p id="code">
+            <div class="contain1">
+                <p id="code1">
                     <strong>
 
                         #include&lt;iostream&gt; <br>
@@ -164,24 +190,265 @@
                         }<br></strong>
                 </p>
 
-                <iframe id="frame" width="100%" height="100%" src="https://tio.run/#cpp-gcc" title="C++ Compiler"
+                <iframe id="frame1" width="100%" height="100%" src="https://tio.run/##S9ZNT07@DwQA" title="C Compiler"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
         </div>
     </section>
+
+    <!-- NEW SECTION FOR C++ -->
+    <section>
+
+        <div class="main2">
+            <div class="btn2">
+                <button class="code-btn2" onclick="code2()">C++</button>
+                <button class=" compiler-btn2" onclick="compiler2()">Compiler</button>
+            </div>
+
+            <div class="contain2">
+                <p id="code2">
+                    <strong>
+
+                        #include&lt;iostream&gt; <br>
+                        using namespace std;<br>
+                        &nbsp;<br>
+                        // perform bubble sort<br>
+                        &nbsp;void bubbleSort(int array[], int size) {<br>
+                        <br>
+                        // loop to access each array element<br>
+                        &nbsp;&nbsp;for (int step = 0; step &lt; size; ++step) { <br>
+                        <br>
+                        // loop to compare array elements<br>
+                        &nbsp;&nbsp;for (int i=0; i &lt; size - step; ++i) {<br>
+                        <br>
+                        // compare two adjacent elements <br>
+                        // change &gt; to &lt; to sort in descending order<br>
+                        &nbsp;&nbsp;if (array[i] &gt; array[i+ 1]) {<br>
+                        <br>
+                        // swapping elements if elements<br>
+                        // are not in the intended order<br>
+                        &nbsp;&nbsp;&nbsp;int temp = array[i];<br>
+                        &nbsp;&nbsp;&nbsp;array[i] = array[i + 1];<br>
+                        &nbsp;&nbsp;&nbsp;array[i + 1] = temp;<br>
+                        &nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;}<br>
+                        &nbsp;}<br>
+                        }<br>
+                        <br>
+                        // print array<br>
+                        <br>
+                        void printArray(int array[], int size) {<br>
+                        &nbsp;for (int i = 0; i &lt; size; ++i) {<br>
+                        &nbsp;&nbsp;cout &lt;&lt; " " &lt;&lt; array[i];<br>
+                        &nbsp;}<br>
+                        &nbsp;cout&lt;&lt; "\n" ;<br>
+                        }<br>
+                        <br>
+                        int main(){<br>
+                        int data[]={-2, 45, 0, 11, -9};<br>
+                        <br>
+
+                        // find array's length<br>
+                        &nbsp;&nbsp;int size=sizeof(data) / sizeof(data[0]);<br>
+
+                        &nbsp;&nbsp;bubbleSort(data, size);<br>
+
+                        &nbsp;&nbsp;cout &lt;&lt; "Sorted Array in Ascending Order:\n" ;<br>
+                        &nbsp;&nbsp;printArray(data,size);<br>
+                        }<br></strong>
+                </p>
+
+                <iframe id="frame2" width="100%" height="100%" src="https://tio.run/#cpp-gcc" title="C++ Compiler"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION FOR JAVA -->
+    <section>
+        <div class="main3">
+            <div class="btn3">
+                <button class="code-btn3" onclick="code3()">JAVA</button>
+                <button class=" compiler-btn3" onclick="compiler3()">Compiler</button>
+            </div>
+
+            <div class="contain3">
+                <p id="code3">
+                    <strong>
+
+                        #include&lt;iostream&gt; <br>
+                        using namespace std;<br>
+                        &nbsp;<br>
+                        // perform bubble sort<br>
+                        &nbsp;void bubbleSort(int array[], int size) {<br>
+                        <br>
+                        // loop to access each array element<br>
+                        &nbsp;&nbsp;for (int step = 0; step &lt; size; ++step) { <br>
+                        <br>
+                        // loop to compare array elements<br>
+                        &nbsp;&nbsp;for (int i=0; i &lt; size - step; ++i) {<br>
+                        <br>
+                        // compare two adjacent elements <br>
+                        // change &gt; to &lt; to sort in descending order<br>
+                        &nbsp;&nbsp;if (array[i] &gt; array[i+ 1]) {<br>
+                        <br>
+                        // swapping elements if elements<br>
+                        // are not in the intended order<br>
+                        &nbsp;&nbsp;&nbsp;int temp = array[i];<br>
+                        &nbsp;&nbsp;&nbsp;array[i] = array[i + 1];<br>
+                        &nbsp;&nbsp;&nbsp;array[i + 1] = temp;<br>
+                        &nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;}<br>
+                        &nbsp;}<br>
+                        }<br>
+                        <br>
+                        // print array<br>
+                        <br>
+                        void printArray(int array[], int size) {<br>
+                        &nbsp;for (int i = 0; i &lt; size; ++i) {<br>
+                        &nbsp;&nbsp;cout &lt;&lt; " " &lt;&lt; array[i];<br>
+                        &nbsp;}<br>
+                        &nbsp;cout&lt;&lt; "\n" ;<br>
+                        }<br>
+                        <br>
+                        int main(){<br>
+                        int data[]={-2, 45, 0, 11, -9};<br>
+                        <br>
+
+                        // find array's length<br>
+                        &nbsp;&nbsp;int size=sizeof(data) / sizeof(data[0]);<br>
+
+                        &nbsp;&nbsp;bubbleSort(data, size);<br>
+
+                        &nbsp;&nbsp;cout &lt;&lt; "Sorted Array in Ascending Order:\n" ;<br>
+                        &nbsp;&nbsp;printArray(data,size);<br>
+                        }<br></strong>
+                </p>
+
+                <iframe id="frame3" width="100%" height="100%" src="https://tio.run/##y0osS9TNSsn@DwQA"
+                    title="JAVA Compiler" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- NEW SECTION FOR PYTHON -->
+    <section>
+
+        <div class="main4">
+            <div class="btn4">
+                <button class="code-btn4" onclick="code4()">PYTHON</button>
+                <button class=" compiler-btn4" onclick="compiler4()">Compiler</button>
+            </div>
+
+            <div class="contain4">
+                <p id="code4">
+                    <strong>
+
+                        #include&lt;iostream&gt; <br>
+                        using namespace std;<br>
+                        &nbsp;<br>
+                        // perform bubble sort<br>
+                        &nbsp;void bubbleSort(int array[], int size) {<br>
+                        <br>
+                        // loop to access each array element<br>
+                        &nbsp;&nbsp;for (int step = 0; step &lt; size; ++step) { <br>
+                        <br>
+                        // loop to compare array elements<br>
+                        &nbsp;&nbsp;for (int i=0; i &lt; size - step; ++i) {<br>
+                        <br>
+                        // compare two adjacent elements <br>
+                        // change &gt; to &lt; to sort in descending order<br>
+                        &nbsp;&nbsp;if (array[i] &gt; array[i+ 1]) {<br>
+                        <br>
+                        // swapping elements if elements<br>
+                        // are not in the intended order<br>
+                        &nbsp;&nbsp;&nbsp;int temp = array[i];<br>
+                        &nbsp;&nbsp;&nbsp;array[i] = array[i + 1];<br>
+                        &nbsp;&nbsp;&nbsp;array[i + 1] = temp;<br>
+                        &nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;}<br>
+                        &nbsp;}<br>
+                        }<br>
+                        <br>
+                        // print array<br>
+                        <br>
+                        void printArray(int array[], int size) {<br>
+                        &nbsp;for (int i = 0; i &lt; size; ++i) {<br>
+                        &nbsp;&nbsp;cout &lt;&lt; " " &lt;&lt; array[i];<br>
+                        &nbsp;}<br>
+                        &nbsp;cout&lt;&lt; "\n" ;<br>
+                        }<br>
+                        <br>
+                        int main(){<br>
+                        int data[]={-2, 45, 0, 11, -9};<br>
+                        <br>
+
+                        // find array's length<br>
+                        &nbsp;&nbsp;int size=sizeof(data) / sizeof(data[0]);<br>
+
+                        &nbsp;&nbsp;bubbleSort(data, size);<br>
+
+                        &nbsp;&nbsp;cout &lt;&lt; "Sorted Array in Ascending Order:\n" ;<br>
+                        &nbsp;&nbsp;printArray(data,size);<br>
+                        }<br></strong>
+                </p>
+
+                <iframe id="frame4" width="100%" height="100%" src="https://tio.run/##K6gsycjPM/4PBAA"
+                    title="PYTHON Compiler" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
     <script>
-        function compiler() {
+        function compiler1() {
 
-            document.getElementById("code").style.display = "none";
-            document.getElementById("frame").style.display = "block";
-            document.getElementById("frame").style.height = "100vh";
+            document.getElementById("code1").style.display = "none";
+            document.getElementById("frame1").style.display = "block";
+            document.getElementById("frame1").style.height = "100vh";
         }
-        function code() {
+        function code1() {
 
-            document.getElementById("code").style.display = "block";
-            document.getElementById("frame").style.display = "none";
+            document.getElementById("code1").style.display = "block";
+            document.getElementById("frame1").style.display = "none";
+        }
+        function compiler2() {
+
+            document.getElementById("code2").style.display = "none";
+            document.getElementById("frame2").style.display = "block";
+            document.getElementById("frame2").style.height = "100vh";
+        }
+        function code2() {
+
+            document.getElementById("code2").style.display = "block";
+            document.getElementById("frame2").style.display = "none";
+        }
+        function compiler3() {
+
+            document.getElementById("code3").style.display = "none";
+            document.getElementById("frame3").style.display = "block";
+            document.getElementById("frame3").style.height = "100vh";
+        }
+        function code3() {
+
+            document.getElementById("code3").style.display = "block";
+            document.getElementById("frame3").style.display = "none";
+        }
+        function compiler4() {
+
+            document.getElementById("code4").style.display = "none";
+            document.getElementById("frame4").style.display = "block";
+            document.getElementById("frame4").style.height = "100vh";
+        }
+        function code4() {
+
+            document.getElementById("code4").style.display = "block";
+            document.getElementById("frame4").style.display = "none";
         }
     </script>
 </body>

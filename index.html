@@ -24,6 +24,10 @@
 
     }
 
+    .comment {
+        color: rgb(119, 10, 191);
+    }
+
     .main1,
     .main2,
     .main3,
@@ -141,52 +145,50 @@
                 <p id="code1">
                     <strong>
 
-                        #include&lt;iostream&gt; <br>
-                        using namespace std;<br>
-                        &nbsp;<br>
-                        // perform bubble sort<br>
-                        &nbsp;void bubbleSort(int array[], int size) {<br>
+                        #include &lt;stdio.h&gt;<br>
                         <br>
-                        // loop to access each array element<br>
-                        &nbsp;&nbsp;for (int step = 0; step &lt; size; ++step) { <br>
+                        <span class="comment">// perform the bubble sort</span> <br>
+                        void bubbleSort(int array[], int size) {<br>
                         <br>
-                        // loop to compare array elements<br>
-                        &nbsp;&nbsp;for (int i=0; i &lt; size - step; ++i) {<br>
+                        &nbsp;<span class="comment">// loop to access each array element</span><br>
+                        &nbsp;for (int step = 0; step &lt; size - 1; ++step) {<br>
                         <br>
-                        // compare two adjacent elements <br>
-                        // change &gt; to &lt; to sort in descending order<br>
-                        &nbsp;&nbsp;if (array[i] &gt; array[i+ 1]) {<br>
+                        &nbsp;&nbsp;<span class="comment">// loop to compare array elements</span><br>
+                        &nbsp;&nbsp;for (int i = 0; i &lt; size - step - 1; ++i) {<br>
                         <br>
-                        // swapping elements if elements<br>
-                        // are not in the intended order<br>
-                        &nbsp;&nbsp;&nbsp;int temp = array[i];<br>
-                        &nbsp;&nbsp;&nbsp;array[i] = array[i + 1];<br>
-                        &nbsp;&nbsp;&nbsp;array[i + 1] = temp;<br>
+                        &nbsp;&nbsp;&nbsp;<span class="comment">// compare two adjacent elements</span><br>
+                        &nbsp;&nbsp;&nbsp;<span class="comment">// change &gt; to &lt; to sort in descending
+                            order</span><br>
+                        &nbsp;&nbsp;&nbsp;if (array[i] &gt; array[i + 1]) {<br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// swapping occurs if elements</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// are not in the intended order</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;int temp = array[i];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;array[i] = array[i + 1];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;array[i + 1] = temp;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
                         &nbsp;&nbsp;&nbsp;}<br>
                         &nbsp;&nbsp;}<br>
-                        &nbsp;}<br>
                         }<br>
                         <br>
-                        // print array<br>
-                        <br>
+                        <span class="comment">// print array</span><br>
                         void printArray(int array[], int size) {<br>
-                        &nbsp;for (int i = 0; i &lt; size; ++i) {<br>
-                        &nbsp;&nbsp;cout &lt;&lt; " " &lt;&lt; array[i];<br>
-                        &nbsp;}<br>
-                        &nbsp;cout&lt;&lt; "\n" ;<br>
+                        &nbsp;&nbsp;for (int i = 0; i &lt; size; ++i) {<br>
+                        &nbsp;&nbsp;&nbsp; printf("%d ", array[i]);<br>
+                        &nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp; printf("\n");<br>
                         }<br>
                         <br>
-                        int main(){<br>
-                        int data[]={-2, 45, 0, 11, -9};<br>
+                        int main() {<br>
+                        &nbsp; int data[] = {-2, 45, 0, 11, -9};<br>
                         <br>
-
-                        // find array's length<br>
-                        &nbsp;&nbsp;int size=sizeof(data) / sizeof(data[0]);<br>
-
-                        &nbsp;&nbsp;bubbleSort(data, size);<br>
-
-                        &nbsp;&nbsp;cout &lt;&lt; "Sorted Array in Ascending Order:\n" ;<br>
-                        &nbsp;&nbsp;printArray(data,size);<br>
+                        &nbsp;<span class="comment">// find the array's length</span><br>
+                        &nbsp;int size = sizeof(data) / sizeof(data[0]);<br>
+                        <br>
+                        &nbsp; bubbleSort(data, size);<br>
+                        <br>
+                        &nbsp;printf("Sorted Array in Ascending Order:\n");<br>
+                        &nbsp;printArray(data, size);<br>
                         }<br></strong>
                 </p>
 
@@ -214,21 +216,21 @@
                         #include&lt;iostream&gt; <br>
                         using namespace std;<br>
                         &nbsp;<br>
-                        // perform bubble sort<br>
+                        <span class="comment">// perform bubble sort</span><br>
                         &nbsp;void bubbleSort(int array[], int size) {<br>
                         <br>
-                        // loop to access each array element<br>
+                        <span class="comment">// loop to access each array element</span><br>
                         &nbsp;&nbsp;for (int step = 0; step &lt; size; ++step) { <br>
                         <br>
-                        // loop to compare array elements<br>
+                        <span class="comment">// loop to compare array elements</span> <br>
                         &nbsp;&nbsp;for (int i=0; i &lt; size - step; ++i) {<br>
                         <br>
-                        // compare two adjacent elements <br>
-                        // change &gt; to &lt; to sort in descending order<br>
+                        <span class="comment">// compare two adjacent elements </span><br>
+                        <span class="comment">// change &gt; to &lt; to sort in descending order</span><br>
                         &nbsp;&nbsp;if (array[i] &gt; array[i+ 1]) {<br>
                         <br>
-                        // swapping elements if elements<br>
-                        // are not in the intended order<br>
+                        <span class="comment">// swapping elements if elements</span><br>
+                        <span class="comment">// are not in the intended order</span><br>
                         &nbsp;&nbsp;&nbsp;int temp = array[i];<br>
                         &nbsp;&nbsp;&nbsp;array[i] = array[i + 1];<br>
                         &nbsp;&nbsp;&nbsp;array[i + 1] = temp;<br>
@@ -237,7 +239,7 @@
                         &nbsp;}<br>
                         }<br>
                         <br>
-                        // print array<br>
+                        <span class="comment">// print array</span><br>
                         <br>
                         void printArray(int array[], int size) {<br>
                         &nbsp;for (int i = 0; i &lt; size; ++i) {<br>
@@ -250,7 +252,7 @@
                         int data[]={-2, 45, 0, 11, -9};<br>
                         <br>
 
-                        // find array's length<br>
+                        <span class="comment">// find array's length</span><br>
                         &nbsp;&nbsp;int size=sizeof(data) / sizeof(data[0]);<br>
 
                         &nbsp;&nbsp;bubbleSort(data, size);<br>
@@ -280,53 +282,45 @@
                 <p id="code3">
                     <strong>
 
-                        #include&lt;iostream&gt; <br>
-                        using namespace std;<br>
-                        &nbsp;<br>
-                        // perform bubble sort<br>
-                        &nbsp;void bubbleSort(int array[], int size) {<br>
+                        import java.util.Arrays;<br>
                         <br>
-                        // loop to access each array element<br>
-                        &nbsp;&nbsp;for (int step = 0; step &lt; size; ++step) { <br>
+                        class Main {<br>
                         <br>
-                        // loop to compare array elements<br>
-                        &nbsp;&nbsp;for (int i=0; i &lt; size - step; ++i) {<br>
+                        &nbsp; <span class="comment">// perform the bubble sort</span><br>
+                        &nbsp; static void bubbleSort(int array[]) {<br>
+                        &nbsp; int size = array.length;
                         <br>
-                        // compare two adjacent elements <br>
-                        // change &gt; to &lt; to sort in descending order<br>
-                        &nbsp;&nbsp;if (array[i] &gt; array[i+ 1]) {<br>
+                        &nbsp; <span class="comment">// loop to access each array element</span><br>
+                        &nbsp; for (int i = 0; i &lt; size - 1; i++)<br>
                         <br>
-                        // swapping elements if elements<br>
-                        // are not in the intended order<br>
-                        &nbsp;&nbsp;&nbsp;int temp = array[i];<br>
-                        &nbsp;&nbsp;&nbsp;array[i] = array[i + 1];<br>
-                        &nbsp;&nbsp;&nbsp;array[i + 1] = temp;<br>
-                        &nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp; <span class="comment">// loop to compare array elements</span><br>
+                        &nbsp;&nbsp; for (int j = 0; j &lt; size - i - 1; j++)<br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp; <span class="comment">// compare two adjacent elements</span><br>
+                        &nbsp;&nbsp;&nbsp; <span class="comment">// change &gt; to &lt; to sort in descending
+                            order</span><br>
+                        &nbsp;&nbsp;&nbsp; if (array[j] &gt; array[j + 1]) {<br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; <span class="comment">// swapping occurs if elements</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; <span class="comment">// are not in the intended order</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;int temp = array[j];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; array[j] = array[j + 1];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; array[j + 1] = temp;<br>
+                        &nbsp;&nbsp;&nbsp; }<br>
+                        }<br>
+                        <br>
+                        public static void main(String args[]) {<br>
+                        <br>
+                        &nbsp;&nbsp;int[] data = { -2, 45, 0, 11, -9 };<br>
+                        <br>
+                        &nbsp;&nbsp; <span class="comment">// call method using class name</span><br>
+                        &nbsp;&nbsp; Main.bubbleSort(data);<br>
+                        <br>
+                        &nbsp;&nbsp;System.out.println("Sorted Array in Ascending Order:");<br>
+                        &nbsp;&nbsp;System.out.println(Arrays.toString(data));<br>
                         &nbsp;&nbsp;}<br>
-                        &nbsp;}<br>
                         }<br>
-                        <br>
-                        // print array<br>
-                        <br>
-                        void printArray(int array[], int size) {<br>
-                        &nbsp;for (int i = 0; i &lt; size; ++i) {<br>
-                        &nbsp;&nbsp;cout &lt;&lt; " " &lt;&lt; array[i];<br>
-                        &nbsp;}<br>
-                        &nbsp;cout&lt;&lt; "\n" ;<br>
-                        }<br>
-                        <br>
-                        int main(){<br>
-                        int data[]={-2, 45, 0, 11, -9};<br>
-                        <br>
-
-                        // find array's length<br>
-                        &nbsp;&nbsp;int size=sizeof(data) / sizeof(data[0]);<br>
-
-                        &nbsp;&nbsp;bubbleSort(data, size);<br>
-
-                        &nbsp;&nbsp;cout &lt;&lt; "Sorted Array in Ascending Order:\n" ;<br>
-                        &nbsp;&nbsp;printArray(data,size);<br>
-                        }<br></strong>
+                    </strong>
                 </p>
 
                 <iframe id="frame3" width="100%" height="100%" src="https://tio.run/##y0osS9TNSsn@DwQA"
@@ -349,53 +343,33 @@
                 <p id="code4">
                     <strong>
 
-                        #include&lt;iostream&gt; <br>
-                        using namespace std;<br>
-                        &nbsp;<br>
-                        // perform bubble sort<br>
-                        &nbsp;void bubbleSort(int array[], int size) {<br>
+                        def bubbleSort(array):<br>
                         <br>
-                        // loop to access each array element<br>
-                        &nbsp;&nbsp;for (int step = 0; step &lt; size; ++step) { <br>
+                        &nbsp;&nbsp; <span class="comment"># loop to access each array element</span><br>
+                        &nbsp;&nbsp;for i in range(len(array)):<br>
                         <br>
-                        // loop to compare array elements<br>
-                        &nbsp;&nbsp;for (int i=0; i &lt; size - step; ++i) {<br>
+                        &nbsp;&nbsp;&nbsp; <span class="comment"># loop to compare array elements</span><br>
+                        &nbsp;&nbsp;&nbsp; for j in range(0, len(array) - i - 1):<br>
                         <br>
-                        // compare two adjacent elements <br>
-                        // change &gt; to &lt; to sort in descending order<br>
-                        &nbsp;&nbsp;if (array[i] &gt; array[i+ 1]) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; <span class="comment"># compare two adjacent elements</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; <span class="comment"># change &gt; to &lt; to sort in descending
+                            order</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; if array[j] &gt; array[j + 1]:<br>
                         <br>
-                        // swapping elements if elements<br>
-                        // are not in the intended order<br>
-                        &nbsp;&nbsp;&nbsp;int temp = array[i];<br>
-                        &nbsp;&nbsp;&nbsp;array[i] = array[i + 1];<br>
-                        &nbsp;&nbsp;&nbsp;array[i + 1] = temp;<br>
-                        &nbsp;&nbsp;&nbsp;}<br>
-                        &nbsp;&nbsp;}<br>
-                        &nbsp;}<br>
-                        }<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="comment"># swapping elements if elements</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="comment"># are not in the intended order</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp = array[j]<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array[j] = array[j+1]<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array[j+1] = temp<br>
                         <br>
-                        // print array<br>
                         <br>
-                        void printArray(int array[], int size) {<br>
-                        &nbsp;for (int i = 0; i &lt; size; ++i) {<br>
-                        &nbsp;&nbsp;cout &lt;&lt; " " &lt;&lt; array[i];<br>
-                        &nbsp;}<br>
-                        &nbsp;cout&lt;&lt; "\n" ;<br>
-                        }<br>
+                        data = [-2, 45, 0, 11, -9]<br>
                         <br>
-                        int main(){<br>
-                        int data[]={-2, 45, 0, 11, -9};<br>
+                        bubbleSort(data)<br>
                         <br>
-
-                        // find array's length<br>
-                        &nbsp;&nbsp;int size=sizeof(data) / sizeof(data[0]);<br>
-
-                        &nbsp;&nbsp;bubbleSort(data, size);<br>
-
-                        &nbsp;&nbsp;cout &lt;&lt; "Sorted Array in Ascending Order:\n" ;<br>
-                        &nbsp;&nbsp;printArray(data,size);<br>
-                        }<br></strong>
+                        print('Sorted Array in Ascending Order:')<br>
+                        print(data)<br>
+                    </strong>
                 </p>
 
                 <iframe id="frame4" width="100%" height="100%" src="https://tio.run/##K6gsycjPM/4PBAA"
